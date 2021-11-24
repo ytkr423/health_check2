@@ -13,16 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['niddleware' => 'owner_auth'],function(){
+// Route::group(['niddleware' => 'owner_auth'],function(){
 
-    Route::get('/owner/home','Owner\HomeController@index');
+//     Route::get('/owner/home','Owner\HomeController@index');
 
+// });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Auth::routes();
+
+Route::get('/', [App\Http\Controllers\MyController::class, 'index']);
+Route::get('/home', function () {
+    return view('home');
 });
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

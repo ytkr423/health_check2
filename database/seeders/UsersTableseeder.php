@@ -14,7 +14,7 @@ class UsersTableseeder extends Seeder
     public function run()
     {
         // 管理者
-        \App\User::create([
+        \App\Models::create([
             'name'=>'管理者X',
             'email'=>'owner@email.com',
             'password'=>bcrypt('xxxxxxxx'),
@@ -22,7 +22,7 @@ class UsersTableseeder extends Seeder
         ]);
 
         // 患者さん
-        \App\User::create([
+        \App\Models::create([
             'name'=>'患者様X',
             'email'=>'customer@email.com',
             'password'=>bcrypt('yyyyyyyy'),
