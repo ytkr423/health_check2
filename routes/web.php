@@ -20,7 +20,7 @@ Route::group(['niddleware' => 'owner_auth'],function(){
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome!!');
 });
 
 Auth::routes();
