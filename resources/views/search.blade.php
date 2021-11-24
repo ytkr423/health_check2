@@ -1,11 +1,13 @@
-@extends('common')
+@extends('common_search')
 
 @section('pagename','コロナ患者管理システム')
-@section('mainname','患者一覧')
-@section('main')
+@section('mainname','検索結果一覧')
+
+</div>
+
     
-      
- <div class="table">   
+@section('main')
+        <div class="table">   
             <table border="4">
             　<tr>
             　　<th>患者ID</th>
@@ -25,5 +27,10 @@
             　</tr>
             </table>
         </div>
+        <div class="mainmenubotton">
+                <input type="button" onclick="location.href='sample.html'" value="患者情報編集">
+            </div> 
+</body>
+</html>
 
 @endsection

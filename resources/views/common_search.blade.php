@@ -1,6 +1,6 @@
 <html lang="ja"><head>
 <div class="title">
-    <title>医療関係者用ホーム画面</title>
+    <title>検索画面</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="/css/kanrisystem.css" rel="stylesheet">
   <style type="text/css">/* Chart.js */
@@ -24,35 +24,43 @@
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
 
       <div class="sideinfo">
-           <h4>都道府県別コロナ感染者数</h4>
-           <!-- <br> -->
-           <h2>東京都</h2>
+           <h6>サイドメニュー</h6>
            <br>
            <br>
-           <h3>現在地</h3>
            <br>
            <br>
-           <h4>現地コロナ感染者を受け入れ医療施設</h4>
+           <br>
+           
+           <h7>検索項目</h7>
            <br>
            <br>
 
-    </div> 
-        <div class="sidemenubotton">
-                <input type="button" onclick="location.href='sample.html'" value="患者登録">
-            </div>
+        </div> 
 
-            <div class="sidemenubotton">
-                <input type="button" onclick="location.href='/search'" value="患者検索">
-            </div>    
-            <div class="sidemenubotton">
-                <input type="button" onclick="location.href='sample.html'" value="医療関係者登録">
-            </div> 
-            <br>
-            <br>
-            <br>
-            <div class="sidemenubotton">
-                <input type="button" onclick="location.href='sample.html'" value="ログアウト">
-            </div>    
+          <div class="sidemenubottonkensaku">
+                <!-- <input type="button" onclick="location.href='sample.html'" value="患者ID"> -->
+                <a href=""><span></span>患者ID</a>
+          </div>
+          <br>
+          <br>  
+          <div class="sidemenubottonkensaku">
+              <input type="button" onclick="location.href='sample.html'" value="日付">
+          </div>  
+          <br>
+          <br>
+          <div class="sidemenubottonkensaku">
+              <input type="button" onclick="location.href='/search'" value="検索">
+          </div>    
+          <br>
+          <br>
+          <div class="sidemenubottonkensaku">
+              <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
+          </div> 
+          <br>
+          <br>
+          <div class="sidemenubotton">
+              <input type="button" onclick="location.href='sample.html'" value="ログアウト">
+          </div>    
 
 
     </div>
