@@ -15,14 +15,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        // 管理者
-        \App\Models::create([
-            'name'=>'管理者X',
-            'email'=>'owner@email.com',
-            'password'=>bcrypt('xxxxxxxx'),
-            'role'=>'owner'
-=======
         
         //1人目の管理者ユーザー
         \DB::table('users')->insert ([
@@ -32,19 +24,11 @@ class UsersTableSeeder extends Seeder
             'belong_to' => 1,
             'phone_no' => 9087265351,
             'address' =>'N/A',
-            'room_no' =>'N/A'
->>>>>>> a7a5edb5759474d6f19ec7b6e8bbd44f29b56018
+            'room_no' =>'N/A',
+            'role' =>'kanrisha'
         ]);
     
 
-<<<<<<< HEAD
-        // 患者さん
-        \App\Models::create([
-            'name'=>'患者様X',
-            'email'=>'customer@email.com',
-            'password'=>bcrypt('yyyyyyyy'),
-            'role'=>'customer'
-=======
         //2人目の管理者ユーザー
         \DB::table('users')->insert([
             'name' => '管理者2',
@@ -53,8 +37,8 @@ class UsersTableSeeder extends Seeder
             'belong_to' => 2,
             'phone_no' => 9087265352,
             'address' =>'N/A',
-            'room_no' =>'N/A'
->>>>>>> a7a5edb5759474d6f19ec7b6e8bbd44f29b56018
+            'room_no' =>'N/A',
+            'role' =>'kanrisha'
         ]);
         
         
