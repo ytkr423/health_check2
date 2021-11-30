@@ -15,6 +15,33 @@
                 <th>酸素濃度</th>
                 <th>その他</th>
             　</tr>
+            @foreach ($conditions as $condition)
+                <tr>
+                    <!-- タスク名 -->
+                    <td class="">
+                        <div>{{ $condition->id }}</div>
+                    </td>
+                        <td>
+                            <div>{{ $condition->name }}</div>
+                        </td>
+                        <td>
+                            <div>{{ $condition->created_at }}</div>
+                        </td>
+                        <td class="">
+                            <div>{{ $condition->temperature }}</div>
+                    </td>
+ 
+                    <td>
+                        <div>{{$condition->oxygen}}</div>
+                    </td>
+                    
+
+                </tr>
+                @endforeach
+
+
+            
+
             　<tr>
             　　<td><br></td>
             　　<td><br></td>
