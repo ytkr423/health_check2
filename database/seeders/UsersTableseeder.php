@@ -24,7 +24,8 @@ class UsersTableSeeder extends Seeder
             'belong_to' => 1,
             'phone_no' => 9087265351,
             'address' =>'N/A',
-            'room_no' =>'N/A'
+            'room_no' =>'N/A',
+            'role' =>'kanrisha'
         ]);
     
 
@@ -36,7 +37,8 @@ class UsersTableSeeder extends Seeder
             'belong_to' => 2,
             'phone_no' => 9087265352,
             'address' =>'N/A',
-            'room_no' =>'N/A'
+            'room_no' =>'N/A',
+            'role' =>'kanrisha'
         ]);
         
         

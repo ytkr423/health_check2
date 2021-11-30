@@ -26,6 +26,7 @@ class TestUsersTableSeeder extends Seeder
                 'address' => '東京都' .$cnt,
                 'belong_to' => 'N/A',
                 'phone_no' => 'N/A',
+                'role' => 'kanjya',
                 
             ]);
         }
