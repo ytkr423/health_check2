@@ -20,9 +20,12 @@ Route::group(['niddleware' => 'owner_auth'],function(){
 });
 
 Route::get('/', function () {
-    return view('welcome!!');
+    return view('HealthCheck.health_update');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/update', [App\Http\Controllers\UpdateController::class, 'store'])->name('update');
+Route::get('/condition/create', [App\Http\Controllers\ConditionController::class, 'create'])->name('condition.create');
+Route::post('/condition/store', [App\Http\Controllers\ConditionController::class, 'store'])->name('condition.store');
