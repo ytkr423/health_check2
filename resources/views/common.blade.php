@@ -69,9 +69,11 @@
   </div>
 </div>
 <div class="main">
-  <h5>@yield('mainname')</h5>
+<h5>@yield('mainname')</h5>
+
   @yield('main')
 </div>
+
 
 <!-- Icons -->
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>

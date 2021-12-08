@@ -3,6 +3,7 @@
 @section('pagename','コロナ患者管理システム')
 @section('mainname','患者一覧')
 @section('main')
+
     
       
  <div class="table">   

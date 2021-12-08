@@ -18,11 +18,8 @@ Route::get('/',function () {
 });
 */
 Route::get('/',[App\Http\Controllers\MyController::class, 'index']);
-
+Route::get('/search',[App\Http\Controllers\MyController::class, 'search']);
 Route::get('/home',function () {
     return view('home');
 });
 
-Route::get('/search',function(){
-    return view('search');
-});
