@@ -23,7 +23,9 @@ class ConditionsTableSeeder extends Seeder
             'room_no' =>$cnt . 02,
             'temperature' => 26.5,
             'oxygen' => 90,
-            'note' => '備考'    
+            'note' => '備考',
+            'user_id' => $cnt,
+
         ]);
     }
         
