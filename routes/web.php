@@ -12,15 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::group(['niddleware' => 'owner_auth'],function(){
-
-    Route::get('/owner/home','Owner\HomeController@index');
-
+/*
+Route::get('/',function () {
+    return view('home');
 });
-
-Route::get('/', function () {
-    return view('welcome!!');
+*/
+Route::get('/',[App\Http\Controllers\MyController::class, 'index']);
+Route::get('/search',[App\Http\Controllers\MyController::class, 'search']);
+Route::get('/home',function () {
+    return view('home');
 });
 
 Auth::routes();
