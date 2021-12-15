@@ -21,7 +21,8 @@ class ConditionsTableSeeder extends Seeder
             'name' => 'テストユーザー' . $cnt,
             'email' => 'test' .$cnt . '@example.com',
             'room_no' =>$cnt . 02,
-            'temperature' => 26.5,
+            'temperature_morning' => 26.5,
+            'temperature_afternoon' =>36.5,
             'oxygen' => 90,
             'note' => '備考'    
         ]);

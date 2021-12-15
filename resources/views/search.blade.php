@@ -9,12 +9,21 @@
   {{ csrf_field()}}
   {{method_field('get')}}
   <div class="form-group">
-    <label>名前</label>
-    <input type="text" class="form-control col-md-5" placeholder="検索したい名前を入力してください" name="name" value="{{$keyword_name}}">
+    <!-- <label>検索条件選択</label> -->
+    <input type="text" class="form-control col-md-5" placeholder="検索したい名前を入力してください" name="key_word" value="{{$keyword_name}}">
   </div> 
+  
+
+<p>
+    <select name="patient_name">
+        <option value="患者名">患者名</option>
+        <option value="患者ID">患者ID</option>
+        <option value="日付">日付</option>
+    </select>
         <button class="btn btn-info my-2" type="submit">検索</button>
-        
-        
+        </p>
+
+
     
     </form>  
   <h5>@yield('mainname')</h5>
@@ -26,7 +35,8 @@
             　　<th>患者ID</th>
             　　<th>患者名</th>
                 <th>日付</th>
-                <th>体温</th>
+                <th>午前体温</th>
+                <th>午後体温</th>
                 <th>酸素濃度</th>
                 <th>その他</th>
             　</tr>
@@ -36,7 +46,8 @@
             　　<td>{{$item->id}}</td>
             　　<td>{{$item->name}}</td>
                 <td>{{$item->date}}</td>
-                <td>{{$item->temperature}}</td>
+                <td>{{$item->temperature_morning}}</td>
+                <td>{{$item->temperature_afternoon}}</td>
             　　<td>{{$item->oxygen}}</td>
                 <td>{{$item->note}}</td>
             　</tr>

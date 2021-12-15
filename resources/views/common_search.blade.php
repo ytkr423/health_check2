@@ -43,8 +43,9 @@
           <br>
           <br>
           <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
+              <input type="button" onclick="location.href='/'" value="ホーム画面">
           </div> 
+          
           <br>
           <br>
           <div class="sidemenubotton">

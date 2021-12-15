@@ -28,10 +28,14 @@
            <!-- <br> -->
            <h2>東京都</h2>
            <br>
-           <br>
+           <div class = "tokyokansen">
+           </div>
+           <!-- <br> -->
            <h3>現在地</h3>
            <br>
-           <br>
+           <div class = "genchikansen">
+           </div>
+           <!-- <br> -->
            <h4>現地コロナ感染者を受け入れ医療施設</h4>
            <br>
            <br>
