@@ -23,24 +23,32 @@
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
 
-      <div class="sideinfo">
+      <!-- <div class="sideinfo">
            <h4>都道府県別コロナ感染者数</h4>
-           <!-- <br> -->
+           <br>
            <h2>東京都</h2>
            <br>
            <div class = "tokyokansen">
            </div>
-           <!-- <br> -->
+           <br>
            <h3>現在地</h3>
            <br>
            <div class = "genchikansen">
            </div>
-           <!-- <br> -->
+           <br>
            <h4>現地コロナ感染者を受け入れ医療施設</h4>
            <br>
            <br>
 
-    </div> 
+    </div>  -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
         <div class="sidemenubotton">
                 <input type="button" onclick="location.href='sample.html'" value="患者登録">
             </div>
