@@ -1,6 +1,7 @@
-@extends('layouts.app')
 
-@section('content')
+@extends('common_search')
+
+@section('main')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,9 +10,11 @@
 
                 <div class="card-body">
                     
-                        @csrf
+                        
 
-                    <form method="POST" action="{{ route('user.edit') }}">   
+                    <form method="POST" action="{{ route('user.edit') }}">
+                    @csrf   
+                        <input type="hidden" value="{{ $user->id }}" name="id">
                         <div class="form-group row">
                             <label for="room_no" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}</label>
 
@@ -65,7 +68,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" value="submit">
                                         {{ __('登録') }}
                                     </button>
                             </div>
@@ -74,7 +77,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" name="delete" value="delete">
                                         {{ __('削除') }}
                                     </button>
                             </div>

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('common_search')
 
-@section('content')
+@section('main')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -11,7 +11,7 @@
                     
                         @csrf
 
-                        <label for=""><a href="{{ route('register1') }}"> <input type="button"  value="戻る" name="buck"> </a></label>
+                        <label for=""><a href="{{ route('home') }}"> <input type="button"  value="戻る" name="buck"> </a></label>
                                 
 
                             </div>

@@ -43,7 +43,9 @@
           <br>
           <br>
           <div class="sidemenubottonkensaku">
+            <a href="http://127.0.0.1:8000/">
               <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
+            </a>
           </div> 
           <br>
           <br>
@@ -66,6 +68,7 @@
   </div>
 </div>
 <div class="main">
+  
   @yield('main')
 </div>
 

@@ -117,7 +117,7 @@ class HomeController extends Controller
         if( strcmp($methodname , 'delete') == 0){
             Log::info('destoroy');
             HomeController::destroy($request);
-            return redirect()->route('members');
+            return redirect()->route('user.completed');
         } else {
             $requestData = $request->all();
             $id = $requestData['id'];
@@ -125,9 +125,8 @@ class HomeController extends Controller
             $user->name=$requestData['name'];
             $user->email=$requestData['email'];
             $user->room_no=$requestData['room_no'];
-            $user->password=$requestData['room_no'];
             $user->belong_to=$requestData['belong_to'];
-            $user->phone=$requestData['phone'];
+            $user->phone_no=$requestData['phone_no'];
             $user->address=$requestData['address'];
             $user->save();
             return redirect()->route('user.completed');
