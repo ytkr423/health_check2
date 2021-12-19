@@ -12,20 +12,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::group(['niddleware' => 'owner_auth'],function(){
-
-    Route::get('/owner/home','Owner\HomeController@index');
-
+/*
+Route::get('/',function () {
+    return view('home');
 });
+*/
+Route::get('/',[App\Http\Controllers\MyController::class, 'index']);
 
-Route::get('/', function () {
-    return view('HealthCheck.health_update');
-});
+
+Route::get('/update/{id}', [App\Http\Controllers\UpdateController::class, 'update']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/update', [App\Http\Controllers\UpdateController::class, 'store'])->name('update');
-Route::get('/condition/create', [App\Http\Controllers\ConditionController::class, 'create'])->name('condition.create');
+
+Route::get('/condition/create/{id}', [App\Http\Controllers\ConditionController::class, 'create'])->name('condition.create');
 Route::post('/condition/store', [App\Http\Controllers\ConditionController::class, 'store'])->name('condition.store');
+
+Route::get('/home',function () {
+    return view('home');
+});
+
+Route::get('/search',function(){
+    return view('search');
+});
