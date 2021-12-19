@@ -13,7 +13,7 @@ h3{
   font-size: 10px;
 }
 h4{
-  font-size: 10px;
+  font-size: 17px;
   background-color: rgb(193, 218, 193);
   margin-top: auto;
   padding-top: 0%;
@@ -72,6 +72,12 @@ body {
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   }
+
+  /* .tokyokansen{
+    margin-block: 30px;
+    border-top: blue;
+    border-bottom: rgb(10, 8, 2);
+  } */
   
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .sidebar-sticky {
@@ -146,10 +152,10 @@ body {
   .sidebar{
     float:left;
     border-right: solid 2px gray;
-    border-left: solid 2px gray;
-    border-top: solid 2px gray;
-    border-bottom: solid 2px gray;
-    margin-right: 20px;
+    /* border-left: solid 2px gray;
+    border-top: solid 2px gray; */
+    /* border-bottom: solid 2px gray; */
+    margin-right: 10px;
     
 }
 

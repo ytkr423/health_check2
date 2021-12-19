@@ -28,10 +28,7 @@ Auth::routes();
 Route::get('/condition/create/{id}', [App\Http\Controllers\ConditionController::class, 'create'])->name('condition.create');
 Route::post('/condition/store', [App\Http\Controllers\ConditionController::class, 'store'])->name('condition.store');
 
+Route::get('/search',[App\Http\Controllers\MyController::class, 'search']);
 Route::get('/home',function () {
     return view('home');
-});
-
-Route::get('/search',function(){
-    return view('search');
 });

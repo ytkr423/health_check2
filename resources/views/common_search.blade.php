@@ -37,25 +37,15 @@
 
         </div> 
 
-          <div class="sidemenubottonkensaku">
-                <!-- <input type="button" onclick="location.href='sample.html'" value="患者ID"> -->
-                <a href=""><span></span>患者ID</a>
-          </div>
           <br>
-          <br>  
-          <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='sample.html'" value="日付">
-          </div>  
+          <br>
+          
           <br>
           <br>
           <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='/search'" value="検索">
-          </div>    
-          <br>
-          <br>
-          <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
+              <input type="button" onclick="location.href='/'" value="ホーム画面">
           </div> 
+          
           <br>
           <br>
           <div class="sidemenubotton">
@@ -77,7 +67,6 @@
   </div>
 </div>
 <div class="main">
-  <h5>@yield('mainname')</h5>
   @yield('main')
 </div>
 

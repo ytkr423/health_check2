@@ -3,6 +3,7 @@
 @section('pagename','コロナ患者管理システム')
 @section('mainname','患者一覧')
 @section('main')
+
     
       
  <div class="table">   
@@ -11,7 +12,8 @@
             　　<th>患者ID</th>
             　　<th>患者名</th>
                 <th>日付</th>
-                <th>体温</th>
+                <th>午前体温</th>
+                <th>午後体温</th>
                 <th>酸素濃度</th>
                 <th>その他</th>
             　</tr>
@@ -28,7 +30,12 @@
                             <div>{{ $condition->created_at }}</div>
                         </td>
                         <td class="">
-                            <div>{{ $condition->temperature }}</div>
+                            <div>{{ $condition->temperature_morning }}</div>
+
+                    </td>
+                    <td class="">
+                            <div>{{ $condition->temperature_afternoon }}</div>
+
                     </td>
  
                     <td>
