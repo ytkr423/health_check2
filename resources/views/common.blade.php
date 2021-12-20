@@ -41,13 +41,7 @@
            <br>
 
     </div>  -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <h6>メニュー</h6>
     
         <div class="sidemenubotton">
           <a href="http://127.0.0.1:8000/register1">

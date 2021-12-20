@@ -24,14 +24,14 @@
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
 
       <div class="sideinfo">
-           <h6>サイドメニュー</h6>
+           <h6>メニュー</h6>
            <br>
            <br>
            <br>
            <br>
            <br>
            
-           <h7>検索項目</h7>
+           
            <br>
            <br>
 
