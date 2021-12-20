@@ -26,14 +26,32 @@ class MyController extends Controller{
     //         'users' => $users,
     //         'conditions' => $conditions,
     public function search(Request $request) {
+        // dd($request->all());
         $condition = null;
         $keyword_name = null;
-        if(!empty($request->name)){
-            $keyword_name = $request->name;
-            $query = Condition::query();
-            $condition = $query->where('name','=',$keyword_name)->get();
+        if(!empty($request->key_word)){
+            $keyword_name = $request->key_word;
+            if ( $request->patient_name == "患者名") {
+                $query = User::query();
+                $condition = $query->where('name','like',$keyword_name."%")->get();
+                
+            }
+            if ($request->patient_name == "患者ID"){
+                $query = User::query();
+                $condition = $query->where('id','=',$keyword_name)->get();
+            }
+            if ($request->patient_name == "日付"){
+                $query = User::query();
+                $condition = $query->where('created_at','=',$keyword_name)->get();
+            }
+
+                
+           // }
+
+
             // $condition = $query->where('name','like',"%$keyword_name%")->get();
         }
+
         
         // dd($condition);
         return view('/search')->with([

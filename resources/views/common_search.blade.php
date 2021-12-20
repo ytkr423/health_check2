@@ -47,6 +47,7 @@
               <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
             </a>
           </div> 
+          
           <br>
           <br>
           <div class="sidemenubotton">
