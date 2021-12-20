@@ -18,8 +18,6 @@ class ConditionsTableSeeder extends Seeder
         
         for( $cnt = 1; $cnt <= 20; $cnt++ ) { 
             \DB::table('conditions')->insert([
-            'name' => 'テストユーザー' . $cnt,
-            'email' => 'test' .$cnt . '@example.com',
             'room_no' =>$cnt . 02,
             'temperature_morning' => 26.5,
             'temperature_afternoon' =>36.5,
