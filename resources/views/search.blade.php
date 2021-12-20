@@ -55,6 +55,7 @@
             @endif
             </table>
         </div>
+    
         <div class="mainmenubotton">
                 <input type="button" onclick="location.href='sample.html'" value="患者情報編集">
             </div> 

@@ -50,14 +50,18 @@
     <br>
     
         <div class="sidemenubotton">
+          <a href="http://127.0.0.1:8000/register1">
                 <input type="button" onclick="location.href='sample.html'" value="患者登録">
-            </div>
+          </a>
+        </div>
 
             <div class="sidemenubotton">
                 <input type="button" onclick="location.href='/search'" value="患者検索">
             </div>    
             <div class="sidemenubotton">
+              <a href="http://127.0.0.1:8000/register1">
                 <input type="button" onclick="location.href='sample.html'" value="医療関係者登録">
+              </a>
             </div> 
             <br>
             <br>

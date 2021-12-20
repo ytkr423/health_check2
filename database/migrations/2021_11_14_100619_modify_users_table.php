@@ -43,7 +43,7 @@ class ModifyUsersTable extends Migration
             $table->dropColumn('belong_to');
             $table->dropColumn('phone_no');
             $table->dropColumn('address');
-            $table->dropColumn('softDeletes()');
+            $table->dropSoftDeletes();
             
 
         });
