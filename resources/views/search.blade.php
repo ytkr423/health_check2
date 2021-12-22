@@ -4,29 +4,34 @@
 @section('mainname','検索結果一覧')
 
 @section('main')
-<h8>検索条件を入力してください</h8>
+<label>検索条件選択</label>
 <form action="{{ url('/search')}}" method="get">
   {{ csrf_field()}}
   {{method_field('get')}}
+  <p>
+            <select name="patient_name">
+                <option value="患者名">患者名</option>
+                <option value="患者ID">患者ID</option>
+                <option value="日付">日付</option>
+            </select>
+                
+        </p>
   <div class="form-group">
-    <!-- <label>検索条件選択</label> -->
+    
+    <h8>検索条件を入力してください</h8>
     <input type="text" class="form-control col-md-5" placeholder="検索したい名前を入力してください" name="key_word" value="{{$keyword_name}}">
+    <button class="btn btn-info my-2" type="submit">検索</button>
   </div> 
   
 
-<p>
-    <select name="patient_name">
-        <option value="患者名">患者名</option>
-        <option value="患者ID">患者ID</option>
-        <option value="日付">日付</option>
-    </select>
-        <button class="btn btn-info my-2" type="submit">検索</button>
-        </p>
+        
 
 
     
     </form>  
-  <h5>@yield('mainname')</h5>
+  <h5>
+  <span class="background-skyblue">@yield('mainname')</span>
+  </h5>
 
   
         <div class="table">   
@@ -50,15 +55,15 @@
                 <td>{{$item->temperature_afternoon}}</td>
             　　<td>{{$item->oxygen}}</td>
                 <td>{{$item->note}}</td>
+                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm">編集</a></td>
             　</tr>
             @endforeach
             @endif
             </table>
         </div>
     
-        <div class="mainmenubotton">
-                <input type="button" onclick="location.href='sample.html'" value="患者情報編集">
-            </div> 
+       
+            
 </body>
 </html>
 
