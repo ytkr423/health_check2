@@ -15,11 +15,9 @@ class CreateConditionsTable extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('room_no');
-            $table->string('temperature');
-            $table->integer('oxygen');
+            $table->string('room_no')->nullable();
+            $table->float('temperature', 8, 2);
+            $table->float('oxygen', 8, 2);
             $table->text('note');
             $table->timestamps();
             $table->softDeletes();
