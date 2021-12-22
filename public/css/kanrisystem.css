@@ -24,7 +24,9 @@ h5{
   
   
 }
-
+span.background-skyblue{
+  background-color: lightskyblue; 
+}
 h6{
   background-color: skyblue(77, 85, 88);
   margin-top: auto;
@@ -188,7 +190,8 @@ body {
 
 .main{
     width:60%;
-    margin-left: 40%;   
+    margin-left: 30%;  
+    margin-right: 20%; 
     
 }
 .table{
