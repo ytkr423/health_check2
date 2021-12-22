@@ -21,14 +21,17 @@ h4{
 
 h5{
   font-size: 15px;
-  background-color: lightskyblue;
-  margin-right: 90%;
+  
+  
+  
   
   
 }
-
+span.background-skyblue{
+  background-color: lightskyblue; 
+}
 h6{
-  background-color: blueviolet;
+  background-color:  rgb(235, 220, 222);
   margin-top: auto;
   padding-top: 0%;
 }
@@ -190,7 +193,8 @@ body {
 
 .main{
     width:60%;
-    margin-left: 40%;   
+    margin-left: 30%;  
+    margin-right: 20%; 
     
 }
 .table{
