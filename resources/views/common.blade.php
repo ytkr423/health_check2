@@ -41,44 +41,29 @@
            <br>
 
     </div>  -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <h6>メニュー</h6>
     
-        <div class="sidemenubotton">
-          <a href="http://127.0.0.1:8000/register1">
-                <input type="button" onclick="location.href='sample.html'" value="患者登録">
-          </a>
-        </div>
 
-            <div class="sidemenubotton">
-                <input type="button" onclick="location.href='/search'" value="患者検索">
-            </div>    
-            <div class="sidemenubotton">
-              <a href="http://127.0.0.1:8000/register1">
-                <input type="button" onclick="location.href='sample.html'" value="医療関係者登録">
-              </a>
-            </div> 
-            <br>
-            <br>
-            <br>
-            <div class="sidemenubotton">
-                <input type="button" onclick="location.href='sample.html'" value="ログアウト">
-            </div>    
-
-
+    
+    <div class="row">
+          <div class="col-9">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="{{ url('/') }}" role="tab" aria-controls="v-pills-home" aria-selected="true">ホーム</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#{{ url('/register1') }}" role="tab" aria-controls="v-pills-profile" aria-selected="false">ユーザー登録</a>
+              <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="{{ url('/search') }}" role="tab" aria-controls="v-pills-messages" aria-selected="false">検索画面</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+            </div>
+          </div>
     </div>
+    
     </nav>
-
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 w-auto">
         <h1 class="name"> @yield('pagename') </h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-                    
+     
+    
+    
         </div>
       </div>
     </main>

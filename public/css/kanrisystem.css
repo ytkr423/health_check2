@@ -1,7 +1,6 @@
 h1{
   font-size: 30px;
-  background-color:lightskyblue;
-  margin-left: 35%;
+  margin-left: 30%;
 }
 
 h2{
@@ -21,17 +20,16 @@ h4{
 
 h5{
   font-size: 15px;
-  
-  
-  
-  
+
+  margin-right: 90%;
   
 }
 span.background-skyblue{
   background-color: lightskyblue; 
 }
 h6{
-  background-color:  rgb(235, 220, 222);
+
+  background-color: skyblue(77, 85, 88);
   margin-top: auto;
   padding-top: 0%;
 }
