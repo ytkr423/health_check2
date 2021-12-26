@@ -55,7 +55,8 @@
                 <td>{{$item->temperature_afternoon}}</td>
             　　<td>{{$item->oxygen}}</td>
                 <td>{{$item->note}}</td>
-                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm">編集</a></td>
+                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー体調編集</a></td>
+                <td><a href="/user/edit/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー データー編集</a></td>
             　</tr>
             @endforeach
             @endif

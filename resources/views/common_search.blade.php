@@ -1,11 +1,18 @@
-<html lang="ja"><head>
-<div class="title">
+<html lang="ja">
+<head>
+<!-- <div class="title"> -->
     <title>検索画面</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="/css/kanrisystem.css" rel="stylesheet">
+    <style type="text/css">
+      .font-small {
+        font-size: 0.5rem;
+      }
+</style>
   <style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+</head>
   <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
   <div class="container">
