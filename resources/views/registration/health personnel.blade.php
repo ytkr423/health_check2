@@ -1,7 +1,7 @@
 @extends('common_search')
 @section('pagename','医療従事者・ユーザー登録画面')
 @section('main')
-
+@php $page="form" @endphp
 <div class="container">
     <form method="POST" action="{{ route('users.store') }}">
         @csrf

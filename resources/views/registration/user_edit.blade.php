@@ -1,7 +1,7 @@
 
 @extends('common_search')
 @section('pagename','医療従事者・ユーザー編集画面')
-
+@php $page="" @endphp
 @section('main')
 <div class="container">
   
