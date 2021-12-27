@@ -2,6 +2,7 @@
 
 @section('pagename','コロナ患者管理システム')
 @section('mainname','検索結果一覧')
+@php $page="search" @endphp
 
 @section('main')
 <label>検索条件選択</label>

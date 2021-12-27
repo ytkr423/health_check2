@@ -20,15 +20,14 @@ h4{
 
 h5{
   font-size: 15px;
-
   margin-right: 90%;
+  
   
 }
 span.background-skyblue{
   background-color: lightskyblue; 
 }
 h6{
-
   background-color: skyblue(77, 85, 88);
   margin-top: auto;
   padding-top: 0%;
@@ -197,4 +196,8 @@ body {
 }
 .table{
    margin:10px 20px 20px;
+}
+
+.container{
+  margin-left: 20%;
 }
