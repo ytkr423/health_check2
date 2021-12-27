@@ -1,4 +1,5 @@
 @extends('common_search')
+@php $page="form" @endphp
 
 @section('main')
 <div class="container">
