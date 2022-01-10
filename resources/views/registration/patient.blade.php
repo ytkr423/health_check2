@@ -1,5 +1,5 @@
 @extends('common_search')
-
+@php $page="" @endphp
 @section('main')
 <div class="container">
     <div class="row justify-content-center">

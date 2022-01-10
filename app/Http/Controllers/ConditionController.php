@@ -20,16 +20,24 @@ class ConditionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'temperature' => 'required',
+            'temperature_morning' => 'required',
+            'temperature_afternoon' => 'required',
             'oxygen' => 'required',
             'note' => 'required',
         ]);
-
+        
         $inputs = $request->all();
         $condition = new Condition() ;
+        // $condition = Condition::find($request->id);
         $condition->fill($inputs)->save();
     
         return redirect("home");
+    }
+    public function delete (Request $request)
+    {
+        // dd($request->id);
+        Condition::find($request->id)->delete();
+        return redirect('/search');
     }
 
 }

@@ -18,7 +18,8 @@ class Condition extends Model
     protected $fillable = [
         'room_no',
         'phone_no',
-        'temperature',
+        'temperature_morning',
+        'temperature_afternoon',
         'oxygen',
         'note',
 

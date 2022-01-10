@@ -18,13 +18,13 @@
     ?>
    <!-- 入力フォーム -->
      <div class="form-group">
-         <label for="temperature">午前体温</label>
-        <input type="number" class="form-control-file" id="temperature"  step="0.1" name=temperature value="{{$temperature}}">
+         <label for="temperature_morning">午前体温</label>
+        <input type="number" class="form-control-file" id="temperature_morning"  step="0.1" name=temperature_morning value="{{$temperature_morning}}">
     </div>
 
     <div class="form-group">
-         <label for="temperature">午後体温</label>
-        <input type="number" class="form-control-file" id="temperature"  step="0.1" name=temperature value="{{$temperature}}">
+         <label for="temperature_afternoon">午後体温</label>
+        <input type="number" class="form-control-file" id="temperature_afternoon"  step="0.1" name=temperature_afternoon value="{{$temperature_afternoon}}">
     </div>
 
 
@@ -37,7 +37,7 @@
          <label for="note">その他体調状態</label>
         <input type="text" class="form-control-file" id="note"  step="0.1" name=note value="{{$note}}">
     </div>
-
+        <!-- <input type="hidden" name="id" value="hoge"> -->
     <div class="form-group">
     <div class="col-md-6 offset-md-4">
         <button type="submit" class="btn btn-primary">
