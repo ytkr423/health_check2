@@ -116,7 +116,7 @@ class HomeController extends Controller
     {
         $methodname = $request->input('delete');
         if( strcmp($methodname , 'delete') == 0){
-            Log::info('destoroy');
+            \Log::info('destroy');
             HomeController::destroy($request);
             return redirect()->route('user.completed');
         } else {
@@ -133,6 +133,26 @@ class HomeController extends Controller
             return redirect()->route('user.completed');
         }
     }
+    public function delete (Request $request)
+    {
+        User::find($request->id)->delete();
+        return redirect('/user');
+    }
+    public function signin (Request $request)
+    {
+        return view('user.signin');
+    }
+
+    public function postSignin(Request $request)
+  {
+        $this->validate($request,[
+        'email' => 'email|required',
+        'password' => 'required|min:4'
+        ]);
+        
+        
+        return redirect()->search();
+        }
 
 
     

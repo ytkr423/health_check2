@@ -23,29 +23,8 @@
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
 
-      <!-- <div class="sideinfo">
-           <h4>都道府県別コロナ感染者数</h4>
-           <br>
-           <h2>東京都</h2>
-           <br>
-           <div class = "tokyokansen">
-           </div>
-           <br>
-           <h3>現在地</h3>
-           <br>
-           <div class = "genchikansen">
-           </div>
-           <br>
-           <h4>現地コロナ感染者を受け入れ医療施設</h4>
-           <br>
-           <br>
-
-    </div>  -->
     <h6>メニュー</h6>
-    
-
-    
-    <div class="row">
+     <div class="row">
           <div class="col-9">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               <a class="nav-link @if($page=='home')active @endif" id="v-pills-home-tab" data-bs-toggle="pill" href="{{ url('/') }}" role="tab" aria-controls="v-pills-home" aria-selected="true">ホーム</a>

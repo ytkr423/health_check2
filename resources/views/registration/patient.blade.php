@@ -2,6 +2,7 @@
 @section('pagename','体調登録画面')
 @php $page="" @endphp
 
+
 @section('main')
 
     

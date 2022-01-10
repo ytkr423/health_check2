@@ -56,12 +56,27 @@
                 <td>{{$item->temperature_afternoon}}</td>
             　　<td>{{$item->oxygen}}</td>
                 <td>{{$item->note}}</td>
-                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm">編集</a></td>
+                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー体調編集</a></td>
+                <td><a href="/user/edit/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー データー編集</a></td>
+                <td>
+                <form method="post" action="/condition/delete/{{ $item->id }}">{{ csrf_field() }}
+                    <div class="form-group">
+                            <div class="col-md-4 offset-md-5">
+                <button type="submit" class="btn btn-primary" name="delete" value="delete">
+                                        {{ __('削除') }}
+                </button>
+                </div>
+                    </div> 
+                    </form>
+
+                </td>
             　</tr>
             @endforeach
             @endif
+            
             </table>
         </div>
+        
     
        
             

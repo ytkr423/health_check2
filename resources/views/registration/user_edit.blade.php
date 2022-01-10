@@ -67,16 +67,18 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        
+                    </form>   
+                    <form method="post" action="/user/delete/{{ $user->id }}">{{ csrf_field() }}
+                    <div class="form-group">
                             <div class="col-md-4 offset-md-5">
                                 
                                     <button type="submit" class="btn btn-primary" name="delete" value="delete">
                                         {{ __('削除') }}
                                     </button>
                             </div>
-                        </div>
-                    </form>    
-                    
+                        </div> 
+                    </form>
                 
             
         </div>
