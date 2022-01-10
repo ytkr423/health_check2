@@ -1,16 +1,15 @@
-@extends('layouts.app')
+@extends('common_search')
+@php $page="" @endphp
+@section('pagename','体調登録画面')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" ><?php echo "{$name}" ?>様体調登録画面</div>
-
-                <div class="card-body">
-                <form method="POST" action="{{ route('condition.store') }}" enctype="multipart/form-data">
+@section('main')
+<div class="row justify-content-center">
+    <div class="col-md-8">
+            
+        <form method="POST" action="{{ route('condition.store') }}" enctype="multipart/form-data">
     @csrf
-
+    <!-- 名前表示 -->
+    <?php echo "{$name}" ?>様
    <!-- 日付表示 -->
    <?php
     date_default_timezone_set('Japan');

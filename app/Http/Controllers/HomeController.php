@@ -84,13 +84,14 @@ class HomeController extends Controller
     {
         
         $requestData = $request->all();
-        var_dump($requestData);
-        exit; 
+        //var_dump($requestData);
+        //exit; 
         $condition = new Condition();
-        $condition->temperature=$requestData['temperature'];
-        $condition->oxygen=$requestData['oxygen'];
-        $condition->note=$requestData['note'];
-        $condition->save();
+        $conditions->pm_temperature=$requestData['temperature_afternoon'];
+        $conditions->am_temperature=$requestData['temperature_morning'];
+        $conditions->oxygen=$requestData['oxygen'];
+        $conditions->note=$requestData['note'];
+        $conditions->save();
         return redirect()->route('user.completed');
         
     }
