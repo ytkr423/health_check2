@@ -201,3 +201,7 @@ body {
 .container{
   margin-left: 20%;
 }
+
+.noborder {
+  border: 0px none;
+}
