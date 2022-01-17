@@ -12,7 +12,7 @@
         @csrf
         
         <!-- 日付表示 -->
-        <div class="row">
+        <div class="row text-md-right">
         <?php
             date_default_timezone_set('Japan');
             echo '<P>',date('Y年m月d日'),'</P>';
@@ -40,7 +40,7 @@
             <label for="am_temperature" class="col-md-4 col-form-label text-md-right">{{ __('午前体温') }}</label>
 
             <div class="col-md-6">
-                <input id="am_temperature" type="tel" class="form-control @error('temperature') is-invalid @enderror"  name="am_temperature"  required autocomplete="am_temperature">
+                <input id="am_temperature" type="tel" class="form-control @error('temperature') is-invalid @enderror"  name="temperature_morning"  required autocomplete="am_temperature">
                 {{ $user->temperature_morning}}
             </div>
         </div>
@@ -49,7 +49,7 @@
             <label for="pm_temperature" class="col-md-4 col-form-label text-md-right">{{ __('午後体温') }}</label>
 
             <div class="col-md-6">
-                <input id="pm_temperature" type="tel" class="form-control @error('temperature') is-invalid @enderror"  name="pm_temperature"  required autocomplete="pm_temperature">
+                <input id="pm_temperature" type="tel" class="form-control @error('temperature') is-invalid @enderror"  name="temperature_afternoon"  required autocomplete="pm_temperature">
 
                 
             </div>
@@ -70,9 +70,10 @@
             <label for="note" class="col-md-4 col-form-label text-md-right">{{ __('備考') }}</label>
 
             <div class="col-md-6">
-            <textarea rows="10" cols="40"></textarea>
+            <textarea rows="10" cols="40" name="note"></textarea>
             </div>
         </div>
+        <input type="hidden" name="id" value={{ $user->id }}>
 
         <div class="form-group row mb-0">
             <div class="col-md-6 offset-md-4">
