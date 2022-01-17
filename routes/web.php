@@ -34,7 +34,7 @@ Route::get('/home',function () {
 });
 
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/register1', [App\Http\Controllers\HomeController::class, 'register'])->name('register1');
@@ -44,4 +44,13 @@ Route::get('/user/func/{id}', [App\Http\Controllers\HomeController::class, 'func
 Route::post('/condition/update', [App\Http\Controllers\HomeController::class, 'update'])->name('condition.update');
 Route::get('/user/edit/{id}', [App\Http\Controllers\HomeController::class, 'user_edit'])->name('user.user_edit');
 Route::post('/user/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('user.edit');
+Route::post('/user/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('user.delete');
+Route::post('/condition/delete/{id}', [App\Http\Controllers\ConditionController::class, 'delete'])->name('condition.delete');
+Route::get('/signin', [App\Http\Controllers\HomeController::class, 'signin']);
+Route::post('/signin', [App\Http\Controllers\HomeController::class, 'signin']);
 
+
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
