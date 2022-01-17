@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Condition;
 
 class HomeController extends Controller
 {
@@ -82,16 +83,17 @@ class HomeController extends Controller
      */
     public function update(Request $request)
     {
-        
+        //dd($request);
         $requestData = $request->all();
         //var_dump($requestData);
         //exit; 
         $condition = new Condition();
-        $conditions->pm_temperature=$requestData['temperature_afternoon'];
-        $conditions->am_temperature=$requestData['temperature_morning'];
-        $conditions->oxygen=$requestData['oxygen'];
-        $conditions->note=$requestData['note'];
-        $conditions->save();
+        $condition->temperature_afternoon=$requestData['temperature_afternoon'];
+        $condition->temperature_morning=$requestData['temperature_morning'];
+        $condition->oxygen=$requestData['oxygen'];
+        $condition->note=$requestData['note'];
+        $condition->user_id=$requestData['id'];
+        $condition->save();
         return redirect()->route('user.completed');
         
     }

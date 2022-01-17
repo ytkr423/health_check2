@@ -31,7 +31,7 @@
     
     </form>  
   <h5>
-  <span class="background-skyblue">@yield('mainname')</span>
+  <span class="">@yield('mainname')</span>
   </h5>
 
   
@@ -45,6 +45,9 @@
                 <th>午後体温</th>
                 <th>酸素濃度</th>
                 <th>その他</th>
+                <th class="noborder"></th>
+                <th class="noborder">編集</th>
+                <th class="noborder"></th>
             　</tr>
             @if(!empty($condition))
             @foreach($condition as $item)
@@ -56,18 +59,18 @@
                 <td>{{$item->temperature_afternoon}}</td>
             　　<td>{{$item->oxygen}}</td>
                 <td>{{$item->note}}</td>
-                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー体調編集</a></td>
-                <td><a href="/user/edit/{{$item->id}}" class="btn btn-primary btn-sm font-small">ユーザー データー編集</a></td>
+                <td><a href="/update/{{$item->id}}" class="btn btn-primary btn-sm  col-md-20">ユーザー体調編集</a></td>
+                <td><a href="/user/edit/{{$item->id}}" class="btn btn-primary btn-sm ">ユーザー情報編集</a></td>
                 <td>
                 <form method="post" action="/condition/delete/{{ $item->id }}">{{ csrf_field() }}
                     <div class="form-group">
-                            <div class="col-md-4 offset-md-5">
-                <button type="submit" class="btn btn-primary" name="delete" value="delete">
-                                        {{ __('削除') }}
-                </button>
-                </div>
+                        <div class="col-md-20">
+                            <button type="submit" class="btn btn-primary" name="delete" value="delete">
+                                                    {{ __('削除') }}
+                            </button>
+                        </div>
                     </div> 
-                    </form>
+                </form>
 
                 </td>
             　</tr>

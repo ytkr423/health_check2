@@ -29,7 +29,7 @@ class UpdateController extends Controller
     {
         $user = User::where ('id',$user_id)->first();
         $condition = Condition::find($user_id);
-// dd($user);
+        // dd($user);
         return view('HealthCheck.health_update',[
             'name' =>$user->name,
             'temperature_morning' =>$condition->temperature_morning,
