@@ -52,7 +52,7 @@
             @if(!empty($condition))
             @foreach($condition as $item)
             　<tr>
-            　　<td>{{$item->id}}</td>
+            　　<td>{{$item->user_id}}</td>
             　　<td>{{$item->name}}</td>
                 <td>{{$item->date}}</td>
                 <td>{{$item->temperature_morning}}</td>

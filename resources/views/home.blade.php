@@ -41,14 +41,17 @@
                     <td>
                         <div>{{$condition->oxygen}}</div>
                     </td>
+                    <td>
+                        <div>{{$condition->note}}</div>
+                    </td>
                     
 
                 </tr>
                 @endforeach
+                
 
 
             
-
             　<tr>
             　　<td><br></td>
             　　<td><br></td>

@@ -7,7 +7,7 @@ class MyController extends Controller{
 
     public function index(Request $request){
     
-        $view = view('home');
+        //$view = view('home');
         $users = User::orderBy('created_at', 'asc')->get();
         $conditions = Condition::orderBy('created_at', 'asc')->get();
 
@@ -38,7 +38,7 @@ class MyController extends Controller{
             }
             if ($request->patient_name == "患者ID"){
                 $query = Condition::query();
-                $condition = $query->where('id','=',$keyword_name)->get();
+                $condition = $query->where('user_id','=',$keyword_name)->get();
             }
             if ($request->patient_name == "日付"){
                 $query = Condition::query();

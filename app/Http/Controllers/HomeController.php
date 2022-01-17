@@ -70,8 +70,9 @@ class HomeController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function completed()
+    public function completed(Request $request)
     {
+        dd($request);
         return view('registration.completed');
     }
 
