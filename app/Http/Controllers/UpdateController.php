@@ -25,12 +25,13 @@ class UpdateController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function update($user_id)
+    public function update($id)
     {
-        $user = User::where ('id',$user_id)->first();
-        $condition = Condition::find($user_id);
+        $user = User::where('id',$id)->first();
+        $condition = Condition::find($id);
         // dd($user);
         return view('HealthCheck.health_update',[
+            'id' =>$condition->id,
             'name' =>$user->name,
             'temperature_morning' =>$condition->temperature_morning,
             'temperature_afternoon'=>$condition->temperature_afternoon,

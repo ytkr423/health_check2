@@ -10,7 +10,7 @@
             <div><?php echo "{$name}" ?>様更新画面</div>
 
                     
-            <form method="POST" action="{{ route('condition.store','$id') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('condition.store') }}" enctype="multipart/form-data">
             @csrf
 
             <!-- 日付表示 -->
@@ -39,7 +39,7 @@
                     <label for="note">その他体調状態</label>
                     <input type="text" class="form-control-file" id="note"  step="0.1" name=note value="{{$note}}">
                 </div>
-                    <!-- <input type="hidden" name="id" value="hoge"> -->
+                <input type="hidden"  name="id" value="{{$id}}">
                 <div class="form-group">
                 <div class="col-md-6 offset-md-4">
                     <button type="submit" class="btn btn-primary">

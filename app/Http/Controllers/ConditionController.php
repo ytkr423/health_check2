@@ -17,7 +17,7 @@ class ConditionController extends Controller
         ]);
     }
 
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
         $request->validate([
             'temperature_morning' => 'required',
@@ -25,15 +25,15 @@ class ConditionController extends Controller
             'oxygen' => 'required',
             'note' => 'required',
         ]);
-    
+       
         $inputs = $request->all();
         $id = $inputs['id'];
-        var_dump($inputs);
-        exit; 
-        $inputs->save();
-        // $condition = Condition::find($request->id);
-        //$condition->fill($inputs)->save();
-    
+        $condition =Condition::find($id);
+        $condition->temperature_morning=$inputs['temperature_morning'];
+        $condition->temperature_afternoon=$inputs['temperature_afternoon'];
+        $condition->oxygen=$inputs['oxygen'];
+        $condition->note=$inputs['note'];
+        $condition->save();
         return redirect()->route('user.completed');
     }
     public function delete (Request $request)

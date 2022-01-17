@@ -22,6 +22,8 @@ class Condition extends Model
         'temperature_afternoon',
         'oxygen',
         'note',
+        'user_id',
+        'id',
 
 
     ];
