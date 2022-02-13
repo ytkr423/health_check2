@@ -75,8 +75,8 @@
         </div>
         <input type="hidden" name="id" value={{ $user->id }}>
 
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
+        <div class="form-group row mb-7">
+            <div class="col-md-10 offset-md-6">
                 
                     <button type="submit" class="btn btn-primary">
                         {{ __('登録') }}

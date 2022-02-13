@@ -1,5 +1,8 @@
-h1{
+.name{
   font-size: 30px;
+  margin-left: 32%;
+}
+.app_name{
   text-align: center;
 }
 

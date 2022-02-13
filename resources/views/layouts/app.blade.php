@@ -74,7 +74,7 @@
             </div>
         </nav>
         <div class=" pt-3 pb-2 mb-2 text-align-center">
-            <h1 class="name"> @yield('pagename') </h1>
+            <h1 class="app_name"> @yield('pagename') </h1>
         </div>
     <div class="main">
             @yield('main')
