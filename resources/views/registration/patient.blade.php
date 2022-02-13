@@ -1,4 +1,4 @@
-@extends('common_search')
+@extends('layouts/app')
 @section('pagename','体調登録画面')
 @php $page="" @endphp
 
