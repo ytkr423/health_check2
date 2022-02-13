@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +22,9 @@ Route::get('/',[App\Http\Controllers\MyController::class, 'index']);
 
 Route::get('/update/{id}', [App\Http\Controllers\UpdateController::class, 'update']);
 
-Auth::routes();
+Route::prefix('admin')->namespace('Admin')->namespace('admin.')->group(function(){
+    Auth::routes();
+});
 
 
 Route::get('/condition/create/{id}', [App\Http\Controllers\ConditionController::class, 'create'])->name('condition.create');
@@ -46,11 +48,9 @@ Route::get('/user/edit/{id}', [App\Http\Controllers\HomeController::class, 'user
 Route::post('/user/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('user.edit');
 Route::post('/user/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('user.delete');
 Route::post('/condition/delete/{id}', [App\Http\Controllers\ConditionController::class, 'delete'])->name('condition.delete');
-Route::get('/signin', [App\Http\Controllers\HomeController::class, 'signin']);
-Route::post('/signin', [App\Http\Controllers\HomeController::class, 'signin']);
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class,'logout']);
+
+Route::get('/registration/patien', [App\Http\Controllers\HomeController::class, 'store'])->name('registration.patient');
+Route::get('/condition/patient_home', [App\Http\Controllers\HomeController::class, 'home'])->name('patient_home');
 
 
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

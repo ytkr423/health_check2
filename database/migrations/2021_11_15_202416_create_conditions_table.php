@@ -15,7 +15,6 @@ class CreateConditionsTable extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
-            $table->string('room_no')->nullable();
             $table->float('temperature', 8, 2);
             $table->float('oxygen', 8, 2);
             $table->text('note');

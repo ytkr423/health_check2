@@ -40,13 +40,11 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -74,53 +72,8 @@
         </nav>
         <div class="container-fluid">
   <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-
-      <div class="sideinfo">
-           <h6>サイドメニュー</h6>
-           <br>
-           <br>
-           <br>
-           <br>
-           <br>
-           
-           <h7>検索項目</h7>
-           <br>
-           <br>
-
-        </div> 
-
-          <div class="sidemenubottonkensaku">
-                <!-- <input type="button" onclick="location.href='sample.html'" value="患者ID"> -->
-                <a href=""><span></span>患者ID</a>
-          </div>
-          <br>
-          <br>  
-          <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='sample.html'" value="日付">
-          </div>  
-          <br>
-          <br>
-          <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='/search'" value="検索">
-          </div>    
-          <br>
-          <br>
-          <div class="sidemenubottonkensaku">
-              <input type="button" onclick="location.href='sample.html'" value="ホーム画面">
-          </div> 
-          <br>
-          <br>
-          <div class="sidemenubotton">
-              <input type="button" onclick="location.href='sample.html'" value="ログアウト">
-          </div>    
-
-
-    </div>
-    </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="name"> @yield('pagename') </h1>
         <div class="btn-toolbar mb-2 mb-md-0">
                     

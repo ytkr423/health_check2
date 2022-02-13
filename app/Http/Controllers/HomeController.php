@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Condition;
+use Illuminate\Support\Facades\Hash;
+
 
 class HomeController extends Controller
 {
@@ -27,6 +29,17 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * 患者ホーム画面表示
+     * @param Request $request
+     * @return Response
+     */
+    public function home()
+    {
+        return view('condition.patient_home');
+    }
+
 
     /**
      * 医療関係者登録画面表示
@@ -55,7 +68,7 @@ class HomeController extends Controller
         $user->name=$requestData['name'];
         $user->email=$requestData['email'];
         $user->room_no='n/a';
-        $user->password=$requestData['password'];
+        $user->password = Hash::make($requestData['password']);
         $user->belong_to=$requestData['belong_to'];
         $user->phone_no=$requestData['phone_no'];
         $user->address='n/a';
@@ -72,7 +85,7 @@ class HomeController extends Controller
      */
     public function completed(Request $request)
     {
-        dd($request);
+        // dd($request);
         return view('registration.completed');
     }
 
@@ -157,6 +170,35 @@ class HomeController extends Controller
         return redirect()->search();
         }
 
+        public function store_patient(Request $request)
+        {
+                $this->validate($request,[
+                'user_id' => 'required',
+                'name' => 'required',
+                'email' => 'required',
+                'room_no' => 'required',
+                'oxygen' => 'required',
+                'temperature_morning' => 'required',
+                'temperature_afternoon' => 'required',
+
+            ]);
+    
+            $inputs = $request->all();
+            $id = $inputs['id'];
+            $patient=new Patient;
+            $patient->user_id=$request->input('user_id');
+    
+            $patient->name=$request->input('name');
+            $patient->email=$request->input('email');
+            $patient->room_no=$request->input('room_no');
+            $patient->oxygen=$request->input('oxygen');
+            $patient->temperature_morning=$request->input('temperature_morning');
+            $patient->temperature_afternoon=$request->input('temperature_afternoon');
+
+            $patient->save();
+        
+
 
     
+        }
 }

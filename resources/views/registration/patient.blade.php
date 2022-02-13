@@ -8,7 +8,7 @@
     
 <div class="col-md-8">
   
-    <form method="POST" action="{{ route('condition.update') }}">    
+    <form method="POST" action="{{ route('patient.store') }}">    
         @csrf
         
         <!-- 日付表示 -->
