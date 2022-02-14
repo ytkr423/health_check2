@@ -14,9 +14,9 @@ class DeleteConditionsTable extends Migration
     public function up()
     {
         Schema::table('conditions', function (Blueprint $table) {
-            $table->dropColumn('name');
-            $table->dropColumn('email');
-            $table->dropColumn('room_no');
+            // $table->dropColumn('name');
+            // $table->dropColumn('email');
+            // $table->dropColumn('room_no');
         });
     }
 

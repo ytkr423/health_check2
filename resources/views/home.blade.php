@@ -24,7 +24,7 @@
                         <div>{{ $condition->id }}</div>
                     </td>
                         <td>
-                            <div>{{ $condition->name }}</div>
+                            <div>{{ $condition->user->name }}</div>
                         </td>
                         <td>
                             <div>{{ $condition->created_at }}</div>

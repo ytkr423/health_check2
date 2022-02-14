@@ -59,6 +59,7 @@ class HomeController extends Controller
         $user->belong_to=$requestData['belong_to'];
         $user->phone_no=$requestData['phone_no'];
         $user->address='n/a';
+        $user->role='';
         $user->save();
         return redirect()->route('user.completed');
         
@@ -72,7 +73,6 @@ class HomeController extends Controller
      */
     public function completed(Request $request)
     {
-        dd($request);
         return view('registration.completed');
     }
 
@@ -156,7 +156,10 @@ class HomeController extends Controller
         
         return redirect()->search();
         }
-
+        public function condition_register (Request $request)
+        {
+            return view('user.signin');
+        }
 
     
 }

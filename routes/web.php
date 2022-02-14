@@ -29,10 +29,6 @@ Route::get('/condition/create/{id}', [App\Http\Controllers\ConditionController::
 Route::post('/condition/store', [App\Http\Controllers\ConditionController::class, 'store'])->name('condition.store');
 
 Route::get('/search',[App\Http\Controllers\MyController::class, 'search']);
-Route::get('/home',function () {
-    return view('home');
-});
-
 
 
 
@@ -53,4 +49,4 @@ Route::post('/signin', [App\Http\Controllers\HomeController::class, 'signin']);
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
