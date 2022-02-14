@@ -30,7 +30,8 @@
               <a class="nav-link @if($page=='home')active @endif" id="v-pills-home-tab" data-bs-toggle="pill" href="{{ url('/') }}" role="tab" aria-controls="v-pills-home" aria-selected="true">ホーム</a>
               <a class="nav-link @if($page=='form')active @endif" id="v-pills-profile-tab" data-bs-toggle="pill" href="{{ url('/register1') }}" role="tab" aria-controls="v-pills-profile" aria-selected="false">ユーザー登録</a>
               <a class="nav-link @if($page=='search')active @endif" id="v-pills-messages-tab" data-bs-toggle="pill" href="{{ url('/search') }}" role="tab" aria-controls="v-pills-messages" aria-selected="false">検索画面</a>
-              <form action="{{ route('logout') }}" method="post">
+              
+             {{-- <form action="{{ route('logout') }}" method="post">--}}
                 @csrf
                 <input type="submit" value="ログアウト">
               </form>
