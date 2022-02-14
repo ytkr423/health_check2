@@ -13,6 +13,9 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
+    public function conditions() {
+        return $this->hasMany('App\condition');
+      }
 
     /**
      * The attributes that are mass assignable.

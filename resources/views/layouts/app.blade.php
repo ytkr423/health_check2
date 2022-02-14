@@ -37,7 +37,12 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+<<<<<<< HEAD
                             @guest
+=======
+                        
+                        @guest
+>>>>>>> 2c73bf455b264eda2b2adda29230fcda23b90008
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     
@@ -72,6 +77,7 @@
                 </div>
             </div>
         </nav>
+<<<<<<< HEAD
         <div class="container-fluid">
   <div class="row">
 
@@ -79,14 +85,14 @@
         <h1 class="name"> @yield('pagename') </h1>
         <div class="btn-toolbar mb-2 mb-md-0">
                     
+=======
+        <div class=" pt-3 pb-2 mb-2 text-align-center">
+            <h1 class="app_name"> @yield('pagename') </h1>
+>>>>>>> 2c73bf455b264eda2b2adda29230fcda23b90008
         </div>
-      </div>
-    </main>
-  </div>
-</div>
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <div class="main">
+            @yield('main')
     </div>
+       
 </body>
 </html>

@@ -13,6 +13,10 @@ class Condition extends Model
     //public $timestamps = false; //timesatampを利用しない
     use SoftDeletes;
 
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
+
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 
     protected $fillable = [

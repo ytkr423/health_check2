@@ -72,6 +72,7 @@ class HomeController extends Controller
         $user->belong_to=$requestData['belong_to'];
         $user->phone_no=$requestData['phone_no'];
         $user->address='n/a';
+        $user->role='';
         $user->save();
         return redirect()->route('user.completed');
         
@@ -85,7 +86,10 @@ class HomeController extends Controller
      */
     public function completed(Request $request)
     {
+<<<<<<< HEAD
         // dd($request);
+=======
+>>>>>>> 2c73bf455b264eda2b2adda29230fcda23b90008
         return view('registration.completed');
     }
 
@@ -169,6 +173,7 @@ class HomeController extends Controller
         
         return redirect()->search();
         }
+<<<<<<< HEAD
 
         public function store_patient(Request $request)
         {
@@ -198,6 +203,12 @@ class HomeController extends Controller
             $patient->save();
         
 
+=======
+        public function condition_register (Request $request)
+        {
+            return view('user.signin');
+        }
+>>>>>>> 2c73bf455b264eda2b2adda29230fcda23b90008
 
     
         }
